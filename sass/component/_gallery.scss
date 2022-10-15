@@ -1,0 +1,24 @@
+.gallery {
+  @extend %list;
+  @media screen and (min-width: calc($tablet)) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    // width: 370px;
+    @media screen and (min-width: calc($tablet)) {
+      flex-basis: calc((100% - 2 * 15px) / 2);
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: calc($desktop)) {
+      flex-basis: calc((100% - 4 * 15px) / 3);
+    }
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+}

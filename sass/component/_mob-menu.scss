@@ -1,0 +1,17 @@
+.mob-menu {
+  @extend %list;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 300px;
+
+  &__link {
+    @extend %link;
+    @extend %nav-link;
+  }
+
+  &__link--current {
+    position: relative;
+    color: $accent-color;
+  }
+}

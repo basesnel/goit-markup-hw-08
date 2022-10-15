@@ -1,0 +1,36 @@
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  .menu-container & {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu-toggle__icon {
+  width: 40px;
+  height: 40px;
+  transition: fill $animation-time $animation-function;
+
+  .menu-toggle:hover &,
+  .menu-toggle:focus & {
+    fill: $accent-color;
+  }
+}

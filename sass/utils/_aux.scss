@@ -1,0 +1,127 @@
+%list {
+  list-style: none;
+}
+
+%link {
+  text-decoration: none;
+}
+
+%link:hover,
+%link:focus {
+  color: $accent-color;
+}
+
+%icon {
+  fill: currentColor;
+}
+
+%nav-link {
+  display: block;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $prim-txt-color;
+  transition: color $animation-time $animation-function;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.15;
+    padding: 32px 0;
+  }
+}
+
+%scnd-txt-color {
+  color: $scnd-txt-color;
+}
+
+%btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 0;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: $prim-bg-color;
+  background-color: $accent-color;
+  transition: background-color $animation-time $animation-function,
+    box-shadow $animation-time $animation-function;
+}
+
+%btn:hover,
+%btn:focus {
+  box-shadow: 0px 4px 4px $box-shadow4;
+  background-color: $btn-active-color;
+}
+
+%container {
+  padding: 0 15px;
+  margin: 0 auto;
+  // max-width: $desktop;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+
+%section-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  @media screen and (min-width: calc($desktop)) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
+
+%section-subtitle {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+%no-gap {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+%footer-title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  color: $prim-bg-color;
+  text-transform: uppercase;
+  @media screen and (min-width: calc($desktop)) {
+    text-align: left;
+  }
+}
+
+%visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}

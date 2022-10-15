@@ -1,0 +1,36 @@
+.work {
+  @extend %container;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__img {
+    @extend %no-gap;
+  }
+
+  &__subtitle {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: $work-subtitle-overlay;
+    color: $prim-bg-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

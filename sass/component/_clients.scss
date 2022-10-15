@@ -1,0 +1,47 @@
+.clients {
+  @extend %container;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 2 * 15px) / 2);
+    @media screen and (min-width: calc($tablet)) {
+      flex-basis: calc((100% - 4 * 15px) / 3);
+    }
+    @media screen and (min-width: calc($desktop)) {
+      flex-basis: calc((100% - 10 * 15px) / 6);
+    }
+  }
+
+  &__link {
+    @extend %link;
+    display: flex;
+    justify-content: center;
+    height: 92px;
+    border: 1px solid $icons-color;
+    border-radius: 4px;
+    color: $icons-color;
+    transition: border $animation-time $animation-function,
+      color $animation-time $animation-function;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border: 1px solid $accent-color;
+  }
+
+  &__icon {
+    @extend %icon;
+    width: 106px;
+    transition: fill var(--animation-time) var(--animation-function);
+  }
+}

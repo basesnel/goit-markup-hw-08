@@ -1,0 +1,15 @@
+.mob-contact {
+  @extend %list;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 32px;
+  margin-bottom: 64px;
+
+  &__link {
+    @extend %link;
+    @extend %nav-link;
+    @extend %scnd-txt-color;
+    font-size: 34px;
+    line-height: 1.17;
+  }
+}

@@ -1,0 +1,20 @@
+.page-section {
+  padding: 60px 0;
+  @media screen and (min-width: $desktop) {
+    padding: 96px 0 96px;
+  }
+
+  &--scnd-bg {
+    background-color: $scnd-bg-color;
+  }
+
+  &--no-top-padding {
+    //@extend %visually-hidden;
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+      display: block;
+      padding-top: 0;
+    }
+  }
+}

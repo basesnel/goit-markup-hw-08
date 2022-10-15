@@ -1,0 +1,39 @@
+.mob-socials {
+  @extend %list;
+  // mob-close | display: flex;
+  // mob-menu  | display: none;
+  // display: none;
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  &__item {
+    border-right: 1px solid $input-border-color;
+  }
+
+  &__item:last-child {
+    border-right: 0;
+  }
+
+  &__link {
+    @extend %link;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+}
+
+.mob-socials__link {
+  .mob-socials__item:first-child & {
+    padding-left: 0;
+  }
+
+  .mob-socials__item:last-child & {
+    padding-right: 0;
+  }
+}

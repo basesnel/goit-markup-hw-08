@@ -1,0 +1,68 @@
+.features {
+  @extend %container;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__title--hidden {
+    @extend %visually-hidden;
+  }
+
+  &__list {
+    @extend %list;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    // @media screen and (min-width: $desktop) {
+    //   flex-wrap: nowrap;
+    // }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 2 * 15px) / 2);
+      // width: 354px;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 6 * 15px) / 4);
+    }
+  }
+
+  &__img {
+    display: flex;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-color: $scnd-bg-color;
+    justify-content: center;
+  }
+
+  &__icon {
+    width: 70px;
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    @media screen and (min-width: calc($tablet)) {
+      text-align: left;
+    }
+  }
+
+  &__txt {
+    @extend %scnd-txt-color;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}

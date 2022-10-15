@@ -1,0 +1,64 @@
+.team {
+  @extend %container;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__list {
+    @extend %list;
+    @media screen and (min-width: calc($tablet)) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 1px 3px $box-shadow1, 0px 1px 1px $box-shadow2, 0px 2px 1px $box-shadow3;
+    text-align: center;
+    background-color: $prim-bg-color;
+    @media screen and (min-width: calc($tablet)) {
+      flex-basis: calc((100% - 2 * 15px) / 2);
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: calc($desktop)) {
+      flex-basis: calc((100% - 6 * 15px) / 4);
+    }
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__thumb {
+    overflow: hidden;
+  }
+
+  &__img {
+    @extend %no-gap;
+  }
+
+  &__content {
+    padding: 30px 0 24px;
+    @media screen and (min-width: calc($desktop)) {
+      padding: 30px 0;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+
+  &__txt {
+    @extend %scnd-txt-color;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+}

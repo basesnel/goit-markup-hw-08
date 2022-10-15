@@ -1,0 +1,39 @@
+.menu {
+  @extend %list;
+  display: none;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 300px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    @extend %link;
+    @extend %nav-link;
+  }
+
+  &__link--current {
+    position: relative;
+    color: $accent-color;
+  }
+
+  &__link--current::after {
+    @media screen and (min-width: $tablet) {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $accent-color;
+    }
+  }
+}

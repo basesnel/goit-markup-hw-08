@@ -1,0 +1,7 @@
+.footer-socials {
+  margin-bottom: 60px;
+
+  &__title {
+    @extend %footer-title;
+  }
+}

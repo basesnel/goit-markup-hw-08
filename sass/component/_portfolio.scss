@@ -1,0 +1,11 @@
+.portfolio {
+  @extend %container;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__title--hidden {
+    @extend %visually-hidden;
+  }
+}

@@ -1,0 +1,17 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $prim-bg-color;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform $animation-time $animation-function;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}

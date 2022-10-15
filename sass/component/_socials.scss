@@ -1,0 +1,39 @@
+.socials {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  &__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color $animation-time $animation-function;
+  }
+
+  &__link--footer {
+    background-color: $icons-bg-footer;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent-color;
+  }
+}
+
+.socials__icon {
+  width: 20px;
+  fill: $icons-color;
+  transition: fill $animation-time $animation-function;
+
+  &--footer {
+    fill: $prim-bg-color;
+  }
+
+  .socials__link:hover &,
+  .socials__link:focus & {
+    fill: $prim-bg-color;
+  }
+}

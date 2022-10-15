@@ -1,0 +1,46 @@
+// Background colors.
+$prim-bg-color: #fff;
+$scnd-bg-color: #f5f4fa;
+$hero-bg-color: #c4c4c4;
+$hero-bg-overlay: rgba(47, 48, 58, 0.4);
+$footer-bg-color: #2f303a;
+$work-subtitle-overlay: rgba(47, 48, 58, 0.8);
+$portfolio-card-overlay: rgba(33, 150, 243, 0.9);
+// Border colors.
+$header-bottom: #ececec;
+$portfolio-card-border: #eee;
+// Text styles.
+$txt-sans: 'sans-serif';
+$txt-roboto: 'Roboto';
+$txt-releway: 'Raleway';
+$prim-txt-color: #212121;
+$scnd-txt-color: #757575;
+$footer-txt-color: rgba(255, 255, 255, 0.6);
+$logo-nav-color: #000;
+// Accent color.
+$accent-color: #2196f3;
+// Buttons active color.
+$btn-active-color: #188ce8;
+// Icons color.
+$icons-color: #afb1b8;
+$icons-bg-footer: rgba(255, 255, 255, 0.1);
+// Shadows.
+$box-shadow1: rgba(0, 0, 0, 0.12);
+$box-shadow2: rgba(0, 0, 0, 0.14);
+$box-shadow3: rgba(0, 0, 0, 0.2);
+$box-shadow4: rgba(0, 0, 0, 0.15);
+$box-shadow5: rgba(0, 0, 0, 0.1);
+$box-shadow6: rgba(0, 0, 0, 0.08);
+$box-shadow7: rgba(0, 0, 0, 0.06);
+$box-shadow8: rgba(0, 0, 0, 0.16);
+// Form elements colors.
+$input-border-color: rgba(33, 33, 33, 0.2);
+$email-border-color: rgba(255, 255, 255, 0.3);
+$placeholder-txt-color: rgba(117, 117, 117, 0.5);
+// Animations.
+$animation-time: 250ms;
+$animation-function: cubic-bezier(0.4, 0, 0.2, 1);
+// Breackpoints:
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;

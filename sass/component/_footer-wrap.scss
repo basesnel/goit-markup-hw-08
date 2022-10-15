@@ -1,0 +1,13 @@
+.footer-wrap {
+  @extend %container;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  @media screen and (min-width: $desktop) {
+    gap: 93px;
+    justify-content: flex-start;
+  }
+}

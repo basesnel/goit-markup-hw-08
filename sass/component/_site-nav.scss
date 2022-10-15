@@ -1,0 +1,13 @@
+.site-nav {
+  display: inherit;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    gap: 87px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 92px;
+  }
+}

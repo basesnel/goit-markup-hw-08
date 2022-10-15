@@ -1,0 +1,56 @@
+.contact-nav {
+  @extend %list;
+  display: none;
+  flex-direction: column-reverse;
+  gap: 32px;
+  margin-bottom: 64px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  &__link {
+    @extend %link;
+    @extend %nav-link;
+    @extend %scnd-txt-color;
+    font-size: 34px;
+    line-height: 1.17;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 12px;
+      padding: 0;
+    }
+  }
+
+  &__icon {
+    @extend %icon;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.icon-mail {
+  width: 16px;
+  height: 12px;
+  @media screen and (max-width: calc($tablet - 1px)) {
+    display: none;
+  }
+}
+
+.icon-phone {
+  width: 10px;
+  height: 16px;
+  @media screen and (max-width: calc($tablet - 1px)) {
+    display: none;
+  }
+}

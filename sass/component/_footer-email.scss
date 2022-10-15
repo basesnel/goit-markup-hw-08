@@ -1,0 +1,7 @@
+.footer-email {
+  flex-grow: 1;
+
+  &__title {
+    @extend %footer-title;
+  }
+}
