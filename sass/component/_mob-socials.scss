@@ -1,10 +1,12 @@
 .mob-socials {
   @extend %list;
-  // mob-close | display: flex;
-  // mob-menu  | display: none;
-  // display: none;
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and (max-width: $mobile) {
+    row-gap: 10px;
+  }
+
   @media screen and (min-width: $tablet) {
     display: none;
   }
@@ -19,8 +21,7 @@
 
   &__link {
     @extend %link;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px;
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
@@ -31,6 +32,9 @@
 .mob-socials__link {
   .mob-socials__item:first-child & {
     padding-left: 0;
+    @media screen and (max-width: 440px) {
+      padding-left: 10px;
+    }
   }
 
   .mob-socials__item:last-child & {

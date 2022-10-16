@@ -5,9 +5,16 @@
   gap: 32px;
   margin-bottom: 300px;
 
+  // @media screen and (max-width: $mobile) {
+  //   margin-bottom: 100px;
+  // }
+
   &__link {
     @extend %link;
     @extend %nav-link;
+    @media screen and (max-width: 440px) {
+      font-size: 10vw;
+    }
   }
 
   &__link--current {

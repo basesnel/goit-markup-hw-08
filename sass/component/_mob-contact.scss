@@ -11,5 +11,9 @@
     @extend %scnd-txt-color;
     font-size: 34px;
     line-height: 1.17;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 7vw;
+    }
   }
 }

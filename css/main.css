@@ -203,23 +203,23 @@ body.modal-open {
     background-image: url("../images/hero-mobile-2x.jpg");
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tablet-1x.jpg");
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../images/hero-tablet-2x.jpg");
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .hero {
     padding: 200px 0;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-desktop-1x.jpg");
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../images/hero-desktop-2x.jpg");
   }
@@ -1141,6 +1141,11 @@ body.modal-open {
   gap: 32px;
   margin-bottom: 300px;
 }
+@media screen and (max-width: 440px) {
+  .mob-menu__link {
+    font-size: 10vw;
+  }
+}
 .mob-menu__link--current {
   position: relative;
   color: #2196f3;
@@ -1156,10 +1161,20 @@ body.modal-open {
   font-size: 34px;
   line-height: 1.17;
 }
+@media screen and (max-width: 480px) {
+  .mob-contact__link {
+    font-size: 7vw;
+  }
+}
 
 .mob-socials {
   display: flex;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 480px) {
+  .mob-socials {
+    row-gap: 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   .mob-socials {
@@ -1173,8 +1188,7 @@ body.modal-open {
   border-right: 0;
 }
 .mob-socials__link {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 10px;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
@@ -1183,6 +1197,11 @@ body.modal-open {
 
 .mob-socials__item:first-child .mob-socials__link {
   padding-left: 0;
+}
+@media screen and (max-width: 440px) {
+  .mob-socials__item:first-child .mob-socials__link {
+    padding-left: 10px;
+  }
 }
 .mob-socials__item:last-child .mob-socials__link {
   padding-right: 0;

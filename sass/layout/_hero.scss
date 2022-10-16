@@ -21,7 +21,7 @@
     }
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $mobile) {
     background-image: linear-gradient(to right, $hero-bg-overlay, $hero-bg-overlay),
       url('../images/hero-tablet-1x.jpg');
 
@@ -35,7 +35,7 @@
     }
   }
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     padding: 200px 0;
     background-image: linear-gradient(to right, $hero-bg-overlay, $hero-bg-overlay),
       url('../images/hero-desktop-1x.jpg');
