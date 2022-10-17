@@ -11,6 +11,17 @@
   transform: translateX(100%);
   transition: transform $animation-time $animation-function;
 
+  &__wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    @media screen and (max-width: $mobile) {
+      gap: 10vw;
+    }
+  }
+
   &.is-open {
     transform: translateX(0);
   }

@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 300px;
+  // margin-bottom: 300px;
+  flex-grow: 1;
 
   // @media screen and (max-width: $mobile) {
   //   margin-bottom: 100px;
@@ -12,8 +13,8 @@
   &__link {
     @extend %link;
     @extend %nav-link;
-    @media screen and (max-width: 440px) {
-      font-size: 10vw;
+    @media screen and (max-width: $mobile) {
+      font-size: 8vw;
     }
   }
 
