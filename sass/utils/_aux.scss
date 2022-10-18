@@ -94,6 +94,12 @@
   text-transform: uppercase;
 }
 
+%card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 %no-gap {
   display: block;
   max-width: 100%;

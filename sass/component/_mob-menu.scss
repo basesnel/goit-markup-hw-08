@@ -3,18 +3,17 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  // margin-bottom: 300px;
   flex-grow: 1;
 
-  // @media screen and (max-width: $mobile) {
-  //   margin-bottom: 100px;
-  // }
+  @media screen and (max-width: $mobile) {
+    gap: calc(16px + 2vw);
+  }
 
   &__link {
     @extend %link;
     @extend %nav-link;
     @media screen and (max-width: $mobile) {
-      font-size: 8vw;
+      font-size: 7vw;
     }
   }
 

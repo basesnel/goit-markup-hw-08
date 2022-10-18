@@ -5,6 +5,10 @@
   gap: 32px;
   margin-bottom: 64px;
 
+  @media screen and (max-width: $mobile) {
+    gap: calc(16px + 2vw);
+  }
+
   &__link {
     @extend %link;
     @extend %nav-link;
