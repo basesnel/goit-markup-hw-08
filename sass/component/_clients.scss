@@ -14,10 +14,10 @@
 
   &__item {
     flex-basis: calc((100% - 2 * 15px) / 2);
-    @media screen and (min-width: calc($tablet)) {
+    @media screen and (min-width: $tablet) {
       flex-basis: calc((100% - 4 * 15px) / 3);
     }
-    @media screen and (min-width: calc($desktop)) {
+    @media screen and (min-width: $desktop) {
       flex-basis: calc((100% - 10 * 15px) / 6);
     }
   }

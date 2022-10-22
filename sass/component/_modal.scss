@@ -14,11 +14,11 @@
   transition: transform $animation-time $animation-function,
     opacity $animation-time $animation-function, visibility $animation-time $animation-function;
 
-  @media screen and (min-width: calc($mobile)) {
+  @media screen and (min-width: $mobile) {
     width: 450px;
   }
 
-  @media screen and (min-width: calc($desktop)) {
+  @media screen and (min-width: $desktop) {
     width: 528px;
   }
   .backdrop--is-hidden & {
