@@ -21,6 +21,7 @@
   @media screen and (min-width: $desktop) {
     width: 528px;
   }
+
   .backdrop--is-hidden & {
     transform: rotate(-111deg) translate(-50%, -50%) scale(0.382);
     transform-origin: 0 0;
