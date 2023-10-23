@@ -12,7 +12,7 @@
   visibility: visible;
   transition: opacity $animation-time $animation-function,
     visibility $animation-time $animation-function;
-  overflow-y: scroll;
+  // overflow-y: scroll;
 
   &--is-hidden {
     visibility: hidden;
