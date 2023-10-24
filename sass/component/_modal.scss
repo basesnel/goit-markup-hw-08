@@ -1,13 +1,11 @@
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  margin: 15vh auto;
   width: calc(100% - 2 * 15px);
   border-radius: 4px;
   box-shadow: 0px 1px 3px $box-shadow1, 0px 1px 1px $box-shadow2, 0px 2px 1px $box-shadow3;
   padding: 40px;
   background-color: $prim-bg-color;
-  transform: rotate(0) translate(-50%, -50%) scale(1);
+  transform: rotate(0) scale(1);
   opacity: 1;
   visibility: visible;
   transform-origin: 0 0;
@@ -23,7 +21,7 @@
   }
 
   .backdrop--is-hidden & {
-    transform: rotate(-111deg) translate(-50%, -50%) scale(0.382);
+    transform: rotate(0) scale(0.382);
     transform-origin: 0 0;
     opacity: 0;
     visibility: hidden;
