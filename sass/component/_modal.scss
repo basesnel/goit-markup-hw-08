@@ -20,8 +20,16 @@
     width: 528px;
   }
 
+  &--absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+
   .backdrop--is-hidden & {
-    transform: rotate(0) scale(0.382);
+    transform: rotate(-111deg) scale(0.382);
     transform-origin: 0 0;
     opacity: 0;
     visibility: hidden;
@@ -56,3 +64,7 @@
     fill: $accent-color;
   }
 }
+
+// .backdrop--is-hidden .modal--absolute {
+//     transform: translate(-50%, -50%);
+//   }
