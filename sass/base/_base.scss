@@ -30,7 +30,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-@media (min-device-width: 1025px) {
+@media (min-device-width: $desktop-min) {
   body.modal-open {
     padding-right: 15px;
   }

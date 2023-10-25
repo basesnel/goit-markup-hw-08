@@ -29,7 +29,7 @@ body.modal-open {
   overflow: hidden;
 }
 
-@media (min-device-width: 1025px) {
+@media (min-device-width: 1024px) {
   body.modal-open {
     padding-right: 15px;
   }
