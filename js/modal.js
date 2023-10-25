@@ -1,4 +1,5 @@
 (() => {
+  // referals:
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
@@ -6,10 +7,17 @@
     modal: document.querySelector('[data-modal]'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  // events:
+  refs.openModalBtn.addEventListener('click', onToggleModal);
+  refs.closeModalBtn.addEventListener('click', onToggleModal);
+
   addEventListener('resize', onClientResize);
 
+  refs.backDrop.addEventListener('click', event => {
+    if (event.target === event.currentTarget) onToggleModal();
+  });
+
+  // service function
   function getClientSize() {
     if (typeof window.innerWidth == 'number') {
       //Non-IE
@@ -36,6 +44,7 @@
     }
   }
 
+  // event handlers:
   function onClientResize() {
     if (refs.modal.clientHeight <= getClientSize().height) {
       refs.modal.classList.add('modal--absolute');
@@ -44,7 +53,7 @@
     }
   }
 
-  function toggleModal() {
+  function onToggleModal() {
     document.body.classList.toggle('modal-open');
     refs.backDrop.classList.toggle('backdrop--is-hidden');
 
