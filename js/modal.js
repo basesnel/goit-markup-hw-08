@@ -8,6 +8,7 @@
 
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
+  addEventListener('resize', onClientResize);
 
   function getClientSize() {
     if (typeof window.innerWidth == 'number') {
@@ -35,12 +36,18 @@
     }
   }
 
+  function onClientResize() {
+    if (refs.modal.clientHeight <= getClientSize().height) {
+      refs.modal.classList.add('modal--absolute');
+    } else {
+      refs.modal.classList.remove('modal--absolute');
+    }
+  }
+
   function toggleModal() {
     document.body.classList.toggle('modal-open');
     refs.backDrop.classList.toggle('backdrop--is-hidden');
 
-    if (refs.modal.clientHeight <= getClientSize().height) {
-      refs.modal.classList.toggle('modal--absolute');
-    }
+    onClientResize();
   }
 })();
