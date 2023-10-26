@@ -1030,6 +1030,19 @@ body.modal-open {
 .feedback__input::placeholder {
   color: #c4c4c4;
 }
+.feedback__warning {
+  position: absolute;
+  top: 41px;
+  left: 4px;
+  font-size: 9px;
+  font-weight: 500;
+  color: #de690c;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.feedback__warning--coment {
+  top: 140px;
+}
 .feedback__wrap-input {
   position: relative;
 }

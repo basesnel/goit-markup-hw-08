@@ -51,6 +51,21 @@
     color: #c4c4c4;
   }
 
+  &__warning {
+    position: absolute;
+    top: 41px;
+    left: 4px;
+    font-size: 9px;
+    font-weight: 500;
+    color: $warning-color;
+    opacity: 0;
+    transition: opacity $animation-time $animation-function;
+
+    &--coment {
+      top: 140px;
+    }
+  }
+
   &__wrap-input {
     position: relative;
   }
