@@ -38,6 +38,10 @@
     font-size: 12px;
     transition: border $animation-time $animation-function,
       color $animation-time $animation-function;
+
+    &--warning {
+      border: 1px solid $warning-color;
+    }
   }
 
   &__input:hover,
@@ -51,21 +55,6 @@
     color: #c4c4c4;
   }
 
-  &__warning {
-    position: absolute;
-    top: 41px;
-    left: 4px;
-    font-size: 9px;
-    font-weight: 500;
-    color: $warning-color;
-    opacity: 0;
-    transition: opacity $animation-time $animation-function;
-
-    &--coment {
-      top: 140px;
-    }
-  }
-
   &__wrap-input {
     position: relative;
   }
@@ -75,6 +64,7 @@
     padding: 12px 16px;
     border-radius: 4px;
     border: 1px solid $input-border-color;
+    outline: none;
     height: 120px;
     font-size: 12px;
     line-height: 1.17;
@@ -139,6 +129,10 @@
   &__btn-submit {
     @extend %btn;
     width: 200px;
+
+    &--warning {
+      background-color: $warning-color;
+    }
   }
 }
 
@@ -184,6 +178,25 @@
   transition: opacity $animation-time $animation-function;
 
   .feedback__checkbox:checked + .feedback__icon-checkbox > & {
+    opacity: 1;
+  }
+}
+
+.feedback__warning {
+  position: absolute;
+  top: 41px;
+  left: 4px;
+  font-size: 9px;
+  font-weight: 500;
+  color: $warning-color;
+  opacity: 0;
+  transition: opacity $animation-time $animation-function;
+
+  &--coment {
+    top: 140px;
+  }
+
+  .feedback__input--warning ~ & {
     opacity: 1;
   }
 }

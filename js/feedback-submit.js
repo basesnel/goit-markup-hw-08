@@ -1,10 +1,10 @@
 (() => {
-  let form = document.querySelector('.orderform__form'),
-    fields = form.querySelectorAll('.orderform__input'),
-    nameField = form.querySelector('.namefield'),
-    telField = form.querySelector('.telfield'),
-    emailField = form.querySelector('.emailfield'),
-    submitBtn = form.querySelector('.orderform__btn-submit');
+  let form = document.querySelector('.feedback__form'),
+    fields = form.querySelectorAll('.feedback__input'),
+    nameField = form.querySelector('input[name="name"]'),
+    telField = form.querySelector('input[name="tel"]'),
+    emailField = form.querySelector('input[name="email"]'),
+    submitBtn = form.querySelector('.feedback__btn-submit');
 
   function validateEmail(email) {
     let re = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
@@ -21,23 +21,26 @@
     return re.test(String(phone).toLocaleLowerCase());
   }
 
-  form.onsubmit = function () {
+  form.addEventListener('submit', onFeedbackSubmit);
+
+  function onFeedbackSubmit(e) {
+    e.preventDefault();
+
     let nameVal = nameField.value,
       telVal = telField.value,
       emailVal = emailField.value,
-      namelVal = nameField.value,
       emptyInputs = Array.from(fields).filter(input => input.value === '');
 
     fields.forEach(function (input) {
       if (input.value == '') {
         // console.log('Field empty');
-        submitBtn.classList.add('orderform__btn-submit--warning');
-        input.classList.add('orderform__input--warning');
+        submitBtn.classList.add('feedback__btn-submit--warning');
+        input.classList.add('feedback__input--warning');
         // submitBtn.disabled = true;
       } else {
         // console.log('Not empty');
-        submitBtn.classList.remove('orderform__btn-submit--warning');
-        input.classList.remove('orderform__input--warning');
+        submitBtn.classList.remove('feedback__btn-submit--warning');
+        input.classList.remove('feedback__input--warning');
       }
     });
 
@@ -48,28 +51,32 @@
 
     if (!validateName(nameVal)) {
       // console.log('Name not valid.');
-      nameField.classList.add('orderform__input--warning');
+      nameField.classList.add('feedback__input--warning');
       return false;
     } else {
-      nameField.classList.remove('orderform__input--warning');
+      nameField.classList.remove('feedback__input--warning');
     }
 
     if (!validatePhone(telVal)) {
       // console.log('Phone not valid.');
-      telField.classList.add('orderform__input--warning');
+      telField.classList.add('feedback__input--warning');
       return false;
     } else {
-      telField.classList.remove('orderform__input--warning');
+      telField.classList.remove('feedback__input--warning');
     }
 
     if (!validateEmail(emailVal)) {
       // console.log('Email not valid.');
-      emailField.classList.add('orderform__input--warning');
+      emailField.classList.add('feedback__input--warning');
       return false;
     } else {
-      emailField.classList.remove('orderform__input--warning');
+      emailField.classList.remove('feedback__input--warning');
     }
 
-    return false;
-  };
+    new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+
+    e.currentTarget.reset();
+
+    // return false;
+  }
 })();
