@@ -36,12 +36,12 @@
       return { width, height };
     }
 
-    if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
-      //IE 4 compatible
-      const width = document.body.clientWidth;
-      const height = document.body.clientHeight;
-      return { width, height };
-    }
+    // if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+    //IE 4 compatible
+    const width = document.body.clientWidth;
+    const height = document.body.clientHeight;
+    return { width, height };
+    // }
   }
 
   // event handlers:

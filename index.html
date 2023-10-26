@@ -551,7 +551,13 @@
             <label class="feedback__field">
               <span class="feedback__label">Ім'я</span>
               <div class="feedback__wrap-input">
-                <input type="text" name="name" class="feedback__input" placeholder=" " autofocus />
+                <input
+                  type="text"
+                  name="name"
+                  class="feedback__input"
+                  placeholder="Ваше ім'я"
+                  autofocus
+                />
                 <svg class="feedback__input-icon">
                   <use href="./images/icons.svg#modal-person"></use>
                 </svg>
@@ -560,7 +566,12 @@
             <label class="feedback__field">
               <span class="feedback__label">Телефон</span>
               <div class="feedback__wrap-input">
-                <input type="tel" name="tel" class="feedback__input" placeholder=" " />
+                <input
+                  type="tel"
+                  name="tel"
+                  class="feedback__input"
+                  placeholder="+38 (0_ _) _ _ _-_ _-_ _"
+                />
                 <svg class="feedback__input-icon">
                   <use href="./images/icons.svg#modal-tel"></use>
                 </svg>
@@ -569,7 +580,12 @@
             <label class="feedback__field">
               <span class="feedback__label">Пошта</span>
               <div class="feedback__wrap-input">
-                <input type="email" name="email" class="feedback__input" placeholder=" " />
+                <input
+                  type="email"
+                  name="email"
+                  class="feedback__input"
+                  placeholder="example@gmail.com"
+                />
                 <svg class="feedback__input-icon">
                   <use href="./images/icons.svg#modal-mail"></use>
                 </svg>
@@ -649,6 +665,7 @@
 
     <script src="./js/modal.js"></script>
     <script defer src="./js/mobile-menu.js"></script>
+    <script defer src="./js/phone-mask.js"></script>
     <script>
       (() => {
         document.querySelector('.js-speaker-form').addEventListener('submit', e => {
