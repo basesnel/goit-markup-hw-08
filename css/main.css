@@ -1112,7 +1112,7 @@ body.modal-open {
   width: 200px;
   outline: none;
 }
-.feedback__btn-submit--warning, .feedback__btn-submit--warning:hover {
+.feedback__btn-submit--warning, .feedback__btn-submit--warning:hover, .feedback__btn-submit--warning:focus {
   background-color: #de690c;
 }
 

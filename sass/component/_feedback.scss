@@ -133,7 +133,8 @@
   outline: none;
 
   &--warning,
-  &--warning:hover {
+  &--warning:hover,
+  &--warning:focus {
     background-color: $warning-color;
   }
 }
