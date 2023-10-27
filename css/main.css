@@ -1107,10 +1107,12 @@ body.modal-open {
 .feedback__field--submit {
   margin-bottom: 0;
 }
+
 .feedback__btn-submit {
   width: 200px;
+  outline: none;
 }
-.feedback__btn-submit--warning {
+.feedback__btn-submit--warning, .feedback__btn-submit--warning:hover {
   background-color: #de690c;
 }
 

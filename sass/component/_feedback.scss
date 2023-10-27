@@ -125,14 +125,16 @@
   &__field--submit {
     margin-bottom: 0;
   }
+}
 
-  &__btn-submit {
-    @extend %btn;
-    width: 200px;
+.feedback__btn-submit {
+  @extend %btn;
+  width: 200px;
+  outline: none;
 
-    &--warning {
-      background-color: $warning-color;
-    }
+  &--warning,
+  &--warning:hover {
+    background-color: $warning-color;
   }
 }
 
