@@ -39,16 +39,20 @@
     transition: border $animation-time $animation-function,
       color $animation-time $animation-function;
 
-    &--warning {
-      border: 1px solid $warning-color;
+    &:hover,
+    &:focus,
+    &:not(:placeholder-shown) {
+      border: 1px solid $accent-color;
+      color: $accent-color;
     }
-  }
 
-  &__input:hover,
-  &__input:focus,
-  &__input:not(:placeholder-shown) {
-    border: 1px solid $accent-color;
-    color: $accent-color;
+    &--warning,
+    &--warning:hover,
+    &--warning:focus,
+    &--warning:not(:placeholder-shown) {
+      border: 1px solid $warning-color;
+      color: $warning-color;
+    }
   }
 
   &__input::placeholder {
@@ -154,6 +158,13 @@
   .feedback__input:not(:placeholder-shown) ~ & {
     fill: $accent-color;
   }
+
+  .feedback__input--warning ~ &,
+  .feedback__input--warning:hover ~ &,
+  .feedback__input--warning:focus ~ &,
+  .feedback__input--warning:not(:placeholder-shown) ~ & {
+    fill: $warning-color;
+  }
 }
 
 .feedback__icon-checkbox {
@@ -193,7 +204,7 @@
   font-weight: 500;
   color: $warning-color;
   opacity: 0;
-  transition: opacity $animation-time $animation-function;
+  transition: opacity 500ms $animation-function;
 
   &--coment {
     top: 140px;

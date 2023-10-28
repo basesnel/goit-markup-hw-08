@@ -22,13 +22,21 @@
   }
 
   function trimField(e) {
-    const text = e.target.value;
-    e.target.value = text.trim();
+    const input = e.target;
+
+    const text = input.value;
+    input.value = text.trim();
+
+    !(input.value.trim() === '' || input.value.trim() === '+38 (') &&
+      input.classList.remove('feedback__input--warning');
+
+    console.log(!(input.value.trim() === '' || input.value.trim() === '+38 ('));
   }
 
   form.addEventListener('submit', onFeedbackSubmit);
   nameField.addEventListener('blur', trimField);
   emailField.addEventListener('blur', trimField);
+  telField.addEventListener('blur', trimField);
 
   function onFeedbackSubmit(e) {
     e.preventDefault();
@@ -36,7 +44,9 @@
     let nameVal = nameField.value,
       telVal = telField.value,
       emailVal = emailField.value,
-      emptyInputs = Array.from(fields).filter(input => input.value === '');
+      emptyInputs = Array.from(fields).filter(
+        input => input.value === '' || input.value === '+38 (',
+      );
 
     fields.forEach(function (input) {
       if (input.value == '') {
