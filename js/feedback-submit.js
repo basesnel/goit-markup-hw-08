@@ -12,7 +12,8 @@
   }
 
   function validateName(nameFd) {
-    let re = /^(\w{3,25})$/;
+    // let re = /^(\w{3,25})$/;
+    let re = /^([\w\s]{3,25})$/;
     return re.test(String(nameFd).toLocaleLowerCase());
   }
 
