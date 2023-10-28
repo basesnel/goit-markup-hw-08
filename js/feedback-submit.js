@@ -12,7 +12,6 @@
   }
 
   function validateName(nameFd) {
-    // let re = /^(\w{3,25})$/;
     let re = /^([\w\s]{3,25})$/;
     return re.test(String(nameFd).toLocaleLowerCase());
   }
@@ -22,7 +21,14 @@
     return re.test(String(phone).toLocaleLowerCase());
   }
 
+  function trimField(e) {
+    const text = e.target.value;
+    e.target.value = text.trim();
+  }
+
   form.addEventListener('submit', onFeedbackSubmit);
+  nameField.addEventListener('blur', trimField);
+  emailField.addEventListener('blur', trimField);
 
   function onFeedbackSubmit(e) {
     e.preventDefault();
