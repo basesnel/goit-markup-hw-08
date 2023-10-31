@@ -39,16 +39,6 @@
     transition: border $animation-time $animation-function,
       color $animation-time $animation-function;
 
-    &:invalid {
-      border: 1px solid $warning-color;
-      color: $warning-color;
-    }
-
-    &:valid {
-      border: 1px solid $accent-color;
-      color: $accent-color;
-    }
-
     &:hover,
     &:focus,
     &:not(:placeholder-shown) {
