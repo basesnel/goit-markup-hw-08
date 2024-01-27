@@ -548,12 +548,13 @@
         <div class="feedback">
           <p class="feedback__title">Залиште свої дані, ми вам передзвонимо</p>
           <form class="feedback__form js-speaker-form" data-modal autocomplete="off">
-            <label class="feedback__field">
-              <span class="feedback__label">Ім'я</span>
+            <div class="feedback__field">
+              <label class="feedback__label" for="name">Ім'я</label>
               <div class="feedback__wrap-input">
                 <input
                   type="text"
                   name="name"
+                  id="name"
                   class="feedback__input"
                   placeholder="Ваше ім'я"
                   autofocus
@@ -563,13 +564,14 @@
                 </svg>
                 <span class="feedback__warning"> ! - Ім'я має містити від 3 до 25 символів! </span>
               </div>
-            </label>
-            <label class="feedback__field">
-              <span class="feedback__label">Телефон</span>
+            </div>
+            <div class="feedback__field">
+              <label class="feedback__label" for="tel">Телефон</label>
               <div class="feedback__wrap-input">
                 <input
                   type="tel"
                   name="tel"
+                  id="tel"
                   class="feedback__input"
                   placeholder="+38 (0_ _) _ _ _-_ _-_ _"
                 />
@@ -580,13 +582,14 @@
                   ! - Телефон має бути в форматі +38 (099) 000-00-00!
                 </span>
               </div>
-            </label>
-            <label class="feedback__field">
-              <span class="feedback__label">Пошта</span>
+            </div>
+            <div class="feedback__field">
+              <label class="feedback__label" for="email">Пошта</label>
               <div class="feedback__wrap-input">
                 <input
                   type="email"
                   name="email"
+                  id="email"
                   class="feedback__input"
                   placeholder="example@gmail.com"
                 />
@@ -597,7 +600,7 @@
                   ! - Будь-ласка, введіть дійсну адресу електронної пошти!
                 </span>
               </div>
-            </label>
+            </div>
             <label class="feedback__field feedback__field--comment">
               <span class="feedback__label">Коментар</span>
               <textarea
